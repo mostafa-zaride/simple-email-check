@@ -1,6 +1,6 @@
 # simple-email-check
 
-this is a simple python tool chick email valid or invalid 
+  this is a simple python tool chick email valid or invalid 
 
 if email valid return True 
 else return invalid 
