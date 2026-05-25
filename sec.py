@@ -1,3 +1,5 @@
+import re
+
 # list for invalid chars can't you type in email
 invalid_email_chars = [
     # spaces and brackets
@@ -24,9 +26,12 @@ def search(em):
 
 def emailcheck(email):
     count = str(email)
-    if count.count("@") or count.count(".") == 1 :
+    if count.count("@") and count.count(".") == 1 :
         if search(email) :
-            return True
+            if re.search("^.+@.+", email):
+                return True
+            else: 
+                return False
         else:
             return False
     else: 
